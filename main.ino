@@ -2,12 +2,11 @@
 
 LiquidCrystal_I2C lcd = LiquidCrystal_I2C(0x27, 16, 2);
 
-//initiate variable
-int s1;
-int s2;
-float distance = 11;
-float velocity;
-unsigned int ct = 0;
+int           s1;
+int           s2;
+float         distance;
+float         velocity;
+unsigned int  ct;
 unsigned long t0;
 unsigned long t1;
 unsigned long t2;
@@ -19,6 +18,9 @@ void setup() {
   pinMode(6, INPUT);
   pinMode(7, INPUT);
   pinMode(11, OUTPUT);
+  
+  distance  = 11;
+  ct        = 0;
 }
 
 void loop() {
